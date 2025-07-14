@@ -27,7 +27,7 @@ clean-test: ## remove test and coverage artifacts
 	rm -fr .mypy_cache
 
 mypy: ## run mypy
-	uv run mypy src/
+	uv run mypy --namespace-packages --explicit-package-base src/
 
 lint:
 	uv run ruff check --fix src/
