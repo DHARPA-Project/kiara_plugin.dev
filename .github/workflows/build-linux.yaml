@@ -187,7 +187,7 @@ jobs:
           name: conda-pkgs
           path: build-dir/
       - name: release conda package
-        run: uv run --with git+https://github.com/DHARPA-project/kiara_plugin.dev kiara build conda publish --user dharpa --channel main --token ${{ secrets.ANACONDA_PUSH_TOKEN }} build-dir
+        run: uvx --from git+https://github.com/DHARPA-project/kiara_plugin.dev@develop kiara build conda publish --user dharpa --channel main --token ${{ secrets.ANACONDA_PUSH_TOKEN }} build-dir
 
 
   merge_tag_to_main:
