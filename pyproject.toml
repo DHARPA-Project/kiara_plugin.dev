@@ -29,8 +29,11 @@ classifiers = [
     "Programming Language :: Python :: 3.13"
 ]
 dependencies = [
+    "build>=1.2.2.post1",
+    "diskcache>=5.6.3",
     "kiara>=0.5.15,<0.6.0",
     "kiara_plugin.core_types>=0.5.2,<0.6.0",
+    "license-expression>=30.4.3",
 ]
 dynamic = ["version"]
 
@@ -38,6 +41,9 @@ dynamic = ["version"]
 dev = [
     "kiara[dev_utils,marimo,jupyter]",
 ]
+
+[project.entry-points."kiara.cli_subcommands"]
+build = "kiara_plugin.dev.interfaces.cli.pkg_build:pkg_build"
 
 [project.entry-points."kiara.plugin"]
 dev = "kiara_plugin.dev"
@@ -222,6 +228,10 @@ plugins = [
 [[tool.mypy.overrides]]
 module = [
     "appdirs.*",
+    "build.*",
+    "diskcache.*",
+    "license_expression.*",
+    "pydantic2ts.*",
     "pyarrow.*",
     "ruamel.*"
 ]

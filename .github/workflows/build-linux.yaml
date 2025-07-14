@@ -87,7 +87,6 @@ jobs:
           fetch-depth: 0
       - uses: astral-sh/ruff-action@v3
         with:
-          version: "latest"
           args: "--version"
       - name: Run ruff check
         run: ruff check src/
