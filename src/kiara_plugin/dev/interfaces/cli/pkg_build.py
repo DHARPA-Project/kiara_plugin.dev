@@ -372,8 +372,8 @@ def publish_conda_pkgs(
 
     rattler_mgmt: RattlerBuildEnvMgmt = RattlerBuildEnvMgmt()
     rattler_mgmt.upload_package(
-        artifacts_or_folder=artifacts,
-        token=token,
-        user=user,
+        artifacts_or_folder=artifacts,  # type: ignore
+        token=token,  # type: ignore
+        user=user,  # type: ignore
         channel=channel,  # type: ignore
     )  # type: ignore
