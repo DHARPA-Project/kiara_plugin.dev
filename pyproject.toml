@@ -39,6 +39,9 @@ dev = [
     "kiara[dev_utils,marimo,jupyter]",
 ]
 
+[project.entry-points."kiara.cli_subcommands"]
+build = "kiara_plugin.dev.interfaces.cli.pkg_build:pkg_build"
+
 [project.entry-points."kiara.plugin"]
 dev = "kiara_plugin.dev"
 
