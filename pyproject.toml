@@ -29,6 +29,7 @@ classifiers = [
     "Programming Language :: Python :: 3.13"
 ]
 dependencies = [
+    "diskcache>=5.6.3",
     "kiara>=0.5.15,<0.6.0",
     "kiara_plugin.core_types>=0.5.2,<0.6.0",
 ]
@@ -225,6 +226,10 @@ plugins = [
 [[tool.mypy.overrides]]
 module = [
     "appdirs.*",
+    "build.*",
+    "diskcache.*",
+    "license_expression.*",
+    "pydantic2ts.*",
     "pyarrow.*",
     "ruamel.*"
 ]
