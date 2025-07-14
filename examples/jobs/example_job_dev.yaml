@@ -1,3 +1,0 @@
-operation: "${this_dir}/../pipelines/example_pipeline_dev.yaml"
-inputs:
-  name: "beautiful world"
